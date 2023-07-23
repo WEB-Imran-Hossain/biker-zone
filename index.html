@@ -7,6 +7,21 @@
     <!-- tailwind css daisy UI integration -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'bike-primary': '#E76F51',
+                'bike-primary-bg': '#264653',
+              }
+            }
+          }
+        }
+      </script>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,36 +34,18 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="bg-[#264653] h-screen">
         <!-- navber section start -->
-        <div class="navbar bg-[#264653]">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>Shop</a></li>
-                  <li><a>News</a></li>
-                  <li><a>Connect</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost normal-case text-xl">BikerZone</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>Shop</a></li>
-                <li><a>News</a></li>
-                <li><a>Connect</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <a class="btn btn-error">Login</a>
-            </div>
+      <nav class="flex justify-end items-center md:flex-row md:px-8">
+          <div class="flex items-center list-none text-white pr-6 pt-8 text-sm font-medium md:font-semibold md:text-base">
+            <li class="mr-4 md:pr-8">Home</li>
+            <li class="mr-4 md:pr-8">Shop</li>
+            <li class="mr-4 md:pr-8">News</li>
+            <li class="mr-10 md:pr-8">Contact</li>
+            <li class="bg-[#E76F51] px-5 py-2.5 rounded">Login</li>
           </div>
-         <!-- navber section end -->
+      </nav>
+        <!-- navber section end -->
     </header>
     <main></main>
     <footer></footer>
